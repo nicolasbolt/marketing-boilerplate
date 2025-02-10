@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card'
 
 const ProblemAgitation = () => {
     return (
-      <section id='problem' className='bg-slate-50'>
+      <section id='problem' className='bg-slate-50 px-3 md:px-0'>
       <div id='problem' className='container py-24 sm:py-32 mx-auto'>
         <Card className='py-12'>
           <div className='px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12'>

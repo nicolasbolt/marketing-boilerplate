@@ -20,8 +20,8 @@ const benefits = [
 
 const Solution = () => {
   return (
-    <section id='solution' className='container text-center py-24 sm:py-32 mx-auto'>
-      <h2 className='text-3xl md:text-4xl font-bold '>
+    <section id='solution' className='container text-center py-24 sm:py-32 mx-auto px-3 md:px-0'>
+      <h2 className='text-3xl md:text-4xl font-bold'>
         How Does <span className='bg-clip-text'>This Project Solve Problems</span>
       </h2>
       <p className='md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground'></p>

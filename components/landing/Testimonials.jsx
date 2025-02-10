@@ -48,7 +48,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className='bg-slate-50'>
+    <div className='bg-slate-50 px-3 md:px-0'>
       <section id='testimonials' className='container py-24 sm:py-32 mx-auto'>
         <h2 className='text-3xl md:text-4xl font-bold mx-auto text-center'>
           What Others

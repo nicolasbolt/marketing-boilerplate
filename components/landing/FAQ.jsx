@@ -40,7 +40,7 @@ const FAQList = [
 
 const FAQ = () => {
   return (
-    <section id='faq' className='container py-24 sm:py-32 mx-auto'>
+    <section id='faq' className='container py-24 sm:py-32 mx-auto px-3 md:px-0'>
       <h2 className='text-3xl md:text-4xl font-bold mb-4 text-center mx-auto'>
         Frequently Asked <span className='bg-clip-text'>Questions</span>
       </h2>

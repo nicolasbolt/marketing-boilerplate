@@ -21,7 +21,7 @@ const featureList = [
 
 const Features = () => {
   return (
-    <section id='features'>
+    <section id='features' className='px-3 md:px-0'>
     <div className='container py-24 sm:py-32 mx-auto'>
       <div className='grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center'>
         <div>

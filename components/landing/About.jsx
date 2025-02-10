@@ -47,7 +47,7 @@ const About = () => {
   };
 
   return (
-    <section id='team' className='container py-24 sm:py-32 mx-auto'>
+    <section id='team' className='container py-24 sm:py-32 mx-auto px-3 md:px-0'>
       <h2 className='text-3xl md:text-4xl font-bold mx-auto text-center'>
         <span className='bg-clip-text'>Founder's </span>
         Story!
