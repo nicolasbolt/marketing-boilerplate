@@ -12,8 +12,8 @@ import { Twitter, Linkedin } from 'lucide-react';
 const teamList = [
   {
     imageUrl:
-      'https://res.cloudinary.com/douwvycai/image/upload/f_auto,q_auto/q0nosbkix2z9xfkqwajc',
-    name: 'Nick Bolt',
+      'https://github.com/shadcn.png',
+    name: "Founder's Name",
     position: 'Software Engineer',
     socialNetworks: [
       {
