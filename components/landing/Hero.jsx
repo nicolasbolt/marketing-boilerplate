@@ -22,11 +22,11 @@ const Hero = () => {
         </p>
 
         <div className='space-y-4 md:space-y-0 space-x-4'>
-          <Button asChild>
+          <Button size='lg' asChild>
             <Link target='_blank' href='#'>Main CTA</Link>
           </Button>
 
-          <Button variant='outline'>
+          <Button size='lg' variant='outline'>
           <Link target='_blank' href='#'> Secondary CTA (if needed)</Link>
             
           </Button>

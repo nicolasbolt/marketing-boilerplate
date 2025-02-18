@@ -7,6 +7,7 @@ import Testimonials from "@/components/landing/Testimonials";
 import About from "@/components/landing/About";
 import Pricing from "@/components/landing/Pricing";
 import FAQ from "@/components/landing/FAQ";
+import Newsletter from "@/components/landing/Newsletter";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/* Call to Action */}
       <Pricing />
+
+      {/* Newsletter */}
+      <Newsletter />
 
       {/* FAQ */}
       <FAQ />
