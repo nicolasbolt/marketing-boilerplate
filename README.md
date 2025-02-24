@@ -75,6 +75,9 @@ Distributed under the MIT License.  See `LICENSE` for more information.
 Need development work completed?  Contact me here:
 [My Portfolio](https://nicolasbolt.com)
 
+My LinkedIn Profile:
+[LinkedIn](https://www.linkedin.com/in/nicolas-bolt-59a523131/)
+
 See my SaaS Starter Code that goes well with this project:
 [App Starter](https://github.com/nicolasbolt/app-starter)
 
