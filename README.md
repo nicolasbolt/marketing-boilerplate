@@ -50,7 +50,23 @@ npm install
 ```
 
 ### Setup Stripe API Integration
-TODO
+
+1. Open up the Stripe Test Dashboard
+2. On the left, go to Product Catalog
+3. Create Product
+4. After creating product, open that product and on the 3 dots for the pricing, you should see 'Copy Price ID'.  This is the ID needed to be used in this app for opening the correct payment screen.
+5. Go back to the dashboard
+6. On the left, go to 'Payment Links'
+7. Create a new one with the 'New' button
+8. Choose the product you just created
+9. Choose your settings for the payment page
+10. Go to the After Payment tab
+11. Choose 'Don't show confirmation page
+    - Either redirect to http://localhost:300
+    - Or replace this with whatever your dashboard url is when you deployed the app
+12. Create Link
+13. You should now see a link you can copy
+14. Replace this link wherever a stripe link is required
 
 ## License
 Distributed under the MIT License.  See `LICENSE` for more information.
@@ -68,7 +84,3 @@ Here are some libraries and useful tools I used to build this project.
 * [shadcn](https://github.com/shadcn)
 * [lucide-react](https://github.com/lucide-icons/lucide)
 * [tailwindcss](https://tailwindcss.com/)
-
-
-# TODO
-- finish documentation
