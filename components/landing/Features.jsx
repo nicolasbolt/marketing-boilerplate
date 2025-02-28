@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const featureList = [
@@ -40,8 +41,13 @@ const Features = () => {
             {featureList.map(({ title, description, icon }) => (
               <Card key={title}>
                 <CardHeader className='space-y-1 flex md:flex-row justify-start items-start gap-4'>
-                  <img src={icon} alt={`${title} icon`} className='w-24 h-24' />
-                  <div>
+                <Image
+                  src={icon}
+                  alt={`${title} icon`}
+                  width={96} // 24 * 4 = 96
+                  height={96} // 24 * 4 = 96
+                  className='w-24 h-24'
+                />                  <div>
                     <CardTitle>{title}</CardTitle>
                     <CardDescription className='text-md mt-2'>
                       {description}
@@ -53,11 +59,13 @@ const Features = () => {
           </div>
         </div>
 
-        <img
-          src='https://placehold.co/600x400'
-          className='md:w-11/12 w-full mx-auto h-auto object-contain rounded-lg shadow-lg'
-          alt='Feature Image'
-        />
+        <Image
+        src='https://placehold.co/600x400'
+        alt='Feature Image'
+        width={600}
+        height={400}
+        className='md:w-11/12 w-full mx-auto h-auto object-contain rounded-lg shadow-lg'
+      />
       </div>
     </div>
     </section>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 
 const ProblemAgitation = () => {
@@ -7,11 +8,13 @@ const ProblemAgitation = () => {
       <div id='problem' className='container py-24 sm:py-32 mx-auto'>
         <Card className='py-12'>
           <div className='px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12'>
-            <img
-              src='/undraw_heavy-box.svg'
-              alt=''
-              className='w-[300px] object-contain rounded-lg'
-            />
+          <Image
+            src='/undraw_heavy-box.svg'
+            alt='Problem Image'
+            width={300}
+            height={300}
+            className='object-contain rounded-lg'
+      />
             <div className='bg-green-0 flex flex-col justify-between md:w-8/12'>
               <div className='pb-6'>
                 <h2 className='text-3xl md:text-4xl font-bold'>

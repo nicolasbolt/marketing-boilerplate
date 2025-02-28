@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
@@ -66,11 +67,13 @@ const About = () => {
               className='bg-muted/50 relative mt-8 flex flex-col justify-center items-center'
             >
               <CardHeader className='mt-8 flex justify-center items-center pb-2'>
-                <img
-                  src={imageUrl}
-                  alt={`${name} ${position}`}
-                  className='absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover'
-                />
+              <Image
+                src={imageUrl}
+                alt={`${name} ${position}`}
+                width={96} // 24 * 4 = 96
+                height={96} // 24 * 4 = 96
+                className='absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover'
+              />
                 <CardTitle className='text-center'>{name}</CardTitle>
                 <CardDescription className='text-primary'>
                   {position}

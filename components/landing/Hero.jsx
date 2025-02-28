@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 // This component introduces the user to the product and displays the first CTA button
 
@@ -36,10 +37,13 @@ const Hero = () => {
       {/* Hero cards sections */}
       {/* TODO: This would be better as a video */}
       <div className='z-10 mx-auto'>
-        <img
+        <Image
           src='https://placehold.co/1200x1000'
           alt='Main Image'
           className='w-[80%] h-auto rounded shadow-lg mx-auto'
+          width={1200}
+          height={1000}
+          priority
         />
       </div>
 
