@@ -60,9 +60,44 @@ jobs:
         if [ -f .babelrc.backup ]; then mv .babelrc.backup .babelrc; fi
         if [ -f babel.config.js.backup ]; then mv babel.config.js.backup babel.config.js; fi
 
-  test:
+  # test:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+    
+  #   steps:
+  #   - uses: actions/checkout@v3
+    
+  #   - name: Setup Node.js
+  #     uses: actions/setup-node@v3
+  #     with:
+  #       node-version: '20'
+    
+  #   - name: Cache Node.js modules
+  #     uses: actions/cache@v3
+  #     with:
+  #       path: ~/.npm
+  #       key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+  #       restore-keys: |
+  #         ${{ runner.os }}-node-
+    
+  #   - name: Cache Next.js build
+  #     uses: actions/cache@v3
+  #     with:
+  #       path: |
+  #         .next/cache
+  #       key: ${{ runner.os }}-nextjs-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+  #       restore-keys: |
+  #         ${{ runner.os }}-nextjs-
+    
+  #   - name: Install dependencies
+  #     run: npm ci
+    
+  #   - name: Run unit tests
+  #     run: npm test
+
+  deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: test
     
     steps:
     - uses: actions/checkout@v3
@@ -76,51 +111,16 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    
-    - name: Cache Next.js build
-      uses: actions/cache@v3
+        key: ${{ runner.os }}-node-${{ 
       with:
-        path: |
-          .next/cache
-        key: ${{ runner.os }}-nextjs-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-        restore-keys: |
-          ${{ runner.os }}-nextjs-
-    
-    - name: Install dependencies
-      run: npm ci
-    
-    - name: Run unit tests
-      run: npm test
-
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: test
-  #   
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   
-  #   - name: Setup Node.js
-  #     uses: actions/setup-node@v3
-  #     with:
-  #       node-version: '20'
-  #   
-  #   - name: Cache Node.js modules
-  #     uses: actions/cache@v3
-  #     with:
-  #       path: ~/.npm
-  #       key: ${{ runner.os }}-node-${{ 
-  #     with:
-  #       host: ${{ secrets.DO_HOST }}
-  #       username: ${{ secrets.DO_USERNAME }}
-  #       key: ${{ secrets.DO_SSH_KEY }}
-  #       source: "dist/"
-  #       target: ${{ secrets.DO_TARGET_PATH }}
-  #     with:
-  #       host: ${{ secrets.DO_HOST }}
-  #       username: ${{ secrets.DO_USERNAME }}
-  #       key: ${{ secrets.DO_SSH_KEY }}
-  #       source: "dist/"
-  #       target: ${{ secrets.DO_TARGET_PATH }}
+        host: ${{ secrets.DO_HOST }}
+        username: ${{ secrets.DO_USERNAME }}
+        key: ${{ secrets.DO_SSH_KEY }}
+        source: "dist/"
+        target: ${{ secrets.DO_TARGET_PATH }}
+      with:
+        host: ${{ secrets.DO_HOST }}
+        username: ${{ secrets.DO_USERNAME }}
+        key: ${{ secrets.DO_SSH_KEY }}
+        source: "dist/"
+        target: ${{ secrets.DO_TARGET_PATH }}
